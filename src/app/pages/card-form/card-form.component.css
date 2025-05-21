@@ -1,0 +1,104 @@
+.card-form-container {
+  max-width: 400px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #e0e0e0;
+  padding: 24px 16px 32px 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.close-btn {
+  margin-right: -8px;
+}
+
+.credit-card-visual {
+  background: linear-gradient(135deg, #7abf3b 0%, #4e9e2c 100%);
+  color: #fff;
+  border-radius: 16px;
+  min-height: 140px;
+  padding: 24px 24px 18px 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(100, 150, 80, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chip {
+  width: 36px;
+  height: 24px;
+  background: #ffeb3b;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+.card-number {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 18px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.card-details .label {
+  color: #e0e0e0;
+  display: block;
+  font-size: 11px;
+}
+
+.card-details .value {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.form {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.submit-btn {
+  margin-top: 16px;
+  background: #4e9e2c !important;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 6px;
+  align-self: flex-end;      /* Alinha o botão à direita */
+  box-shadow: 0 2px 8px #e0e0e0;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #35781d !important;
+}

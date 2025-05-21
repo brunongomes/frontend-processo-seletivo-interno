@@ -1,0 +1,50 @@
+<div class="card-form-container">
+  <div class="header">
+    <span class="title">Adicionar novo cartão</span>
+    <button mat-icon-button class="close-btn">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-card class="credit-card-visual">
+    <div class="chip"></div>
+    <div class="card-number">XXXX XXXX XXXX XXXX</div>
+    <div class="card-details">
+      <div>
+        <span class="label">Nome</span>
+        <span class="value">Nome completo</span>
+      </div>
+      <div>
+        <span class="label">Validade</span>
+        <span class="value">MM/AA</span>
+      </div>
+    </div>
+  </mat-card>
+
+  <form [formGroup]="cardForm" class="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Número do cartão</mat-label>
+      <input matInput formControlName="number" placeholder="Informe o número do cartão" maxlength="19">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nome do titular</mat-label>
+      <input matInput formControlName="holder" placeholder="Informe o nome do titular">
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>Validade</mat-label>
+        <input matInput formControlName="expiry" placeholder="Informe a data" maxlength="5">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>CVV</mat-label>
+        <input matInput formControlName="cvv" placeholder="Informe o código" maxlength="4">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" class="submit-btn" type="submit">
+      Cadastrar cartão
+    </button>
+  </form>
+</div>
