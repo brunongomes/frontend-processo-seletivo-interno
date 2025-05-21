@@ -38,4 +38,8 @@ export class CardFormComponent {
       this.router.navigate(['/plans']);
     }
   }
+
+  goToPlans() {
+    this.router.navigate(['/plans']);
+  }
 }
