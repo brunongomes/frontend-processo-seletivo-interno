@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-form',
@@ -23,7 +24,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 export class CardFormComponent {
   cardForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.cardForm = this.fb.group({
       number: ['', [Validators.required, Validators.minLength(16)]],
       holder: ['', Validators.required],
@@ -34,7 +35,7 @@ export class CardFormComponent {
 
   onSubmit() {
     if (this.cardForm.valid) {
-      console.log(this.cardForm.value);
+      this.router.navigate(['/plans']);
     }
   }
 }
