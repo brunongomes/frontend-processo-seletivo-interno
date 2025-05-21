@@ -35,7 +35,7 @@ export class CardFormComponent {
 
   onSubmit() {
     if (this.cardForm.valid) {
-      this.router.navigate(['/plans']);
+      this.router.navigate(['/plans'], { queryParams: { img: 'cartao-cadastrado.png' } });
     }
   }
 

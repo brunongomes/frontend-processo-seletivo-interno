@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CardComponent } from '../../shared/card/card.component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-plans',
@@ -11,8 +12,16 @@ import { Router } from '@angular/router';
   styleUrl: './plans.component.css'
 })
 export class PlansComponent {
-  constructor(private router: Router) {}
+  imagePath: string = 'image-tela-inicial.png';
   
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      if (params['img']) {
+        this.imagePath = params['img'];
+      }
+    });
+  }
+
   cards = [
     { icon: 'attach_money', value: 'R$ 111,00', description: 'Valor do plano pago boleto', iconColor: 'primary' },
     { icon: 'credit_card', value: 'R$ 99,90', description: 'Valor do plano pago cartão', iconColor: 'accent' },
