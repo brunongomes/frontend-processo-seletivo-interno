@@ -1,0 +1,52 @@
+.custom-card {
+  border-radius: 8px;
+  min-width: 180px;
+  min-height: 110px;
+  margin: 0;
+  box-shadow: none;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 24px 20px 24px; /* aumente aqui para mais espaço */
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+}
+
+.icon-avatar {
+  background: #f6faf3;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px; /* espaço maior abaixo do ícone */
+}
+
+.icon {
+  font-size: 28px;
+  color: #7abf3b;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.description {
+  color: #555;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 4px;
+}
